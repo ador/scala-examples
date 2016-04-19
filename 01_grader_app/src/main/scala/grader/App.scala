@@ -8,12 +8,11 @@ object GraderApp extends App {
   
   import Grade._
   override def main(args: Array[String]): Unit = {
-    def isPassed(d: Grade) = ! (d == E || d == F)
-
 //    Grade.values filter isPassed foreach println
     println(grade(50))
   }
 
+  def isPassed(d: Grade) = ! (d == E || d == F)
   def grade(score: Int):Grade = score match {
       case a if (a < 40) => F
       case a if (40<=a && a < 50) => E

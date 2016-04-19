@@ -35,4 +35,23 @@ class GraderTest extends FlatSpec {
   "Grader" should "grade a 101 valued test to A" in {
     assert(A == GraderApp.grade(101))
   }
+  
+  "Grader" should "accept as passed with A" in {
+    assert(GraderApp.isPassed(A))
+  }
+  "Grader" should "accept as passed with B" in {
+    assert(GraderApp.isPassed(B))
+  }
+  "Grader" should "accept as passed with C" in {
+    assert(GraderApp.isPassed(C))
+  }
+  "Grader" should "accept as passed with D" in {
+    assert(GraderApp.isPassed(D))
+  }
+  "Grader" should "reject as not passed with E" in {
+    assert(!GraderApp.isPassed(E))
+  }
+  "Grader" should "reject as not passed with F" in {
+    assert(!GraderApp.isPassed(F))
+  }
 }
