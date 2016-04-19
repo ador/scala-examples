@@ -11,6 +11,9 @@ class GraderTest extends FlatSpec {
   "Grader" should "grade a negative valued test to F" in {
     assert(F == GraderApp.grade(-10))
   }
+  "Grader" should "grade a 40 valued test to F" in {
+    assert(E == GraderApp.grade(41))
+  }
   "Grader" should "grade a 41 valued test to E" in {
     assert(E == GraderApp.grade(41))
   }
@@ -35,7 +38,7 @@ class GraderTest extends FlatSpec {
   "Grader" should "grade a 101 valued test to A" in {
     assert(A == GraderApp.grade(101))
   }
-  
+
   "Grader" should "accept as passed with A" in {
     assert(GraderApp.isPassed(A))
   }
