@@ -28,4 +28,8 @@ class MatcherTest extends FlatSpec {
     assert("Int" == MatcherApp.getType(23))
   }
 
+  "Matcher" should "return 'I don't know'" in {
+    assert("I don't know" == MatcherApp.getType(new User("username")))
+  }
+
 }
