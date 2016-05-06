@@ -10,7 +10,16 @@ object MatcherApp extends App {
     case TweetMsg(_, user, _) if user.name == "adorster" => "Welcome, " + user.name + "!"
     case _ => "Just another tweet"
   }
+
   def printMyMsg(tweet: TweetMsg) = println(processTweet(tweet))
+
+  def getType(x: Any): String = {
+    x match {
+      case x: String => "String"
+      case x: Integer => "Int"
+      case _ => "I don't know"
+    }
+  }
 
   override def main(args: Array[String]): Unit = {
     val user1 = new User("adri")
@@ -19,5 +28,7 @@ object MatcherApp extends App {
     printMyMsg(new TweetMsg(12L, user1, "hello"))
     printMyMsg(new TweetMsg(1345L, user2, "hello"))
     printMyMsg(new TweetMsg(-1L, user3, "hello"))
+    println(getType(12))
+    println(getType(user2))
   }
 }

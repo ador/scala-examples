@@ -5,7 +5,7 @@ import MatcherApp._
 
 class MatcherTest extends FlatSpec {
 
-  "Matcher" should "return 'hi'" in {
+  "Matcher" should "return 'Just another tweet'" in {
     val user1 = new User("adri")
     assert("Just another tweet" == MatcherApp.processTweet(new TweetMsg(134L, user1, "hello")))
   }
@@ -19,4 +19,13 @@ class MatcherTest extends FlatSpec {
     val user2 = new User("adorster")
     assert("Welcome, adorster!" == MatcherApp.processTweet(new TweetMsg(139L, user2, "hello")))
   }
+
+  "Matcher" should "return 'String'" in {
+    assert("String" == MatcherApp.getType("Hello"))
+  }
+
+  "Matcher" should "return 'Int'" in {
+    assert("Int" == MatcherApp.getType(23))
+  }
+
 }
