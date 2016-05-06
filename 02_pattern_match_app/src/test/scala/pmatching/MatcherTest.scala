@@ -3,7 +3,6 @@ package pmatching
 import org.scalatest.FlatSpec
 import MatcherApp._
 
-
 class MatcherTest extends FlatSpec {
 
   "Matcher" should "return 'hi'" in {
@@ -20,6 +19,4 @@ class MatcherTest extends FlatSpec {
     val user2 = new User("adorster")
     assert("Welcome, adorster!" == MatcherApp.processTweet(new TweetMsg(139L, user2, "hello")))
   }
-  
-  
 }
