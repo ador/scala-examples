@@ -7,7 +7,7 @@ object MatcherApp extends App {
 
   def processTweet(tweet: TweetMsg) = tweet match {
     case TweetMsg(id, _, _) if id < 0 => "Invalid (negative) tweet id!"
-    case TweetMsg(_, user, _) if user.name == "adorster" => "Welcome, " + user.name + "!"
+    case TweetMsg(_, user, _) if user.name == "adorster" => "Hello, " + user.name + "!"
     case _ => "Just another tweet"
   }
 
@@ -21,6 +21,14 @@ object MatcherApp extends App {
     }
   }
 
+  def getType2(x: Any): String = {
+    x match {
+      case a: String if a.startsWith("He") => "String with 'He'"
+      case b: Integer if b > 0 => "Positive integer"
+      case _ => "I don't know"
+    }
+  }
+
   override def main(args: Array[String]): Unit = {
     val user1 = new User("adri")
     val user2 = new User("adorster")
@@ -28,7 +36,7 @@ object MatcherApp extends App {
     printMyMsg(new TweetMsg(12L, user1, "hello"))
     printMyMsg(new TweetMsg(1345L, user2, "hello"))
     printMyMsg(new TweetMsg(-1L, user3, "hello"))
-    println(getType(12))
-    println(getType(user2))
+    println(getType2(12))
+    println(getType2("Hello user2"))
   }
 }
