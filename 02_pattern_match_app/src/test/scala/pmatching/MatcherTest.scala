@@ -21,11 +21,11 @@ class MatcherTest extends FlatSpec {
   }
 
   "Matcher" should "return 'String'" in {
-    assert("String" == MatcherApp.getType("Hello"))
+    assert("String: Hello" == MatcherApp.getType("Hello"))
   }
 
   "Matcher" should "return 'Int'" in {
-    assert("Int" == MatcherApp.getType(23))
+    assert("Int: 23" == MatcherApp.getType(23))
   }
 
   "Matcher" should "return 'I don't know'" in {

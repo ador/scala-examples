@@ -15,8 +15,8 @@ object MatcherApp extends App {
 
   def getType(x: Any): String = {
     x match {
-      case x: String => "String"
-      case x: Integer => "Int"
+      case a: String => "String: " + a
+      case b: Integer => "Int: " + b
       case _ => "I don't know"
     }
   }
