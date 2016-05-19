@@ -30,9 +30,9 @@ _Hint 2_: use Scala's pattern matching capabilities!
 You should be able to compile the scala codes and run the tests from the console, via SBT.
 At first, let's check if we can compile the current codes with SBT:
 
-{{< highlight bash >}}
+```
 $ sbt compile
-{{< / highlight >}}
+```
 
 Don't go any further before this works! If you have not installed SBT yet, 
 then follow the [official guide](http://www.scala-sbt.org/0.13/docs/Setup.html).
@@ -43,9 +43,9 @@ It's all set up for you (check "build.sbt" and "project/plugins.sbt" files in th
 
 This one-liner sbt command compiles the code, runs all the tests and creates a code coverage report:
 
-{{< highlight bash >}}
+```
 $ sbt clean "set coverageEnabled := true" test coverage coverageReport
-{{< / highlight >}}
+```
 
 The generated reports can be viewed in a browser, at ["target/scala-2.11/scoverage-report/index.html"](file:///home/adri/hub/scala-examples/01_grader_app/target/scala-2.11/scoverage-report/index.html)
 
