@@ -1,4 +1,6 @@
-# Grader app
+# Grader app dojo
+
+Estimated time to complete: 30 minutes 
 
 ## The task
 Create a simple app that is able to grade a test: for an input test score 
