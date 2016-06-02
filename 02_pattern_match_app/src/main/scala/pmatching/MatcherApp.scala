@@ -7,7 +7,7 @@ object MatcherApp extends App {
 
   def processTweet(tweet: TweetMsg) = tweet match {
     case TweetMsg(id, _, _) if id < 0 => "Invalid (negative) tweet id!"
-    case TweetMsg(_, user, _) if user.name == "adorster" => "Hello, " + user.name + "!"
+    case TweetMsg(_, user, _) if user.name == "adorster" => "Welcome, " + user.name + "!"
     case _ => "Just another tweet"
   }
 
