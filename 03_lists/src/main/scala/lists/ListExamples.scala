@@ -1,4 +1,4 @@
-package pmatching
+package lists
 
 object ListExamples extends App {
 

@@ -1,4 +1,4 @@
-package pmatching
+package lists
 
 import org.scalatest.FlatSpec
 import ListExamples._
