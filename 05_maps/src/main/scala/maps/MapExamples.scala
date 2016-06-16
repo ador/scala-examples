@@ -10,10 +10,6 @@ import scala.collection.mutable.{Map => MuMap}
 
 object MapCollExamples extends App {
 
-  // our usual example classes
-  case class User(name: String)
-  case class TweetMsg(id: Long, user: User, msg: String)
-
   def createSimpleTweetMap(): ImmuMap[Int, String] = {
     val tMap = Map(
       414 -> "#scaladays are coming to Berlin!",
@@ -21,27 +17,32 @@ object MapCollExamples extends App {
       506 -> "#scaladays Scaladex: scala package index")
     return tMap
   }
-  
-//   def createTweetMap(idList: List[Long], msg: String) = {
-//   }
 
-  
-//   def getMutableMap(list: List[Int]): scala.collection.mutable.ListBuffer[Int] = {
-//   }
-  
- 
+   def getMutableMap(): scala.collection.mutable.Map[Int, String] = {
+     val map: MuMap[Int, String] = MuMap()
+     map += (1 -> "think")
+     map += (2 -> "write")
+     map += (3 -> "publish")
+     return map 
+   }
+
   override def main(args: Array[String]): Unit = {
     println("Hello to Maps in Scala!")
     val emptyMap: Map[Int, Int] = Map()
     if (emptyMap.isEmpty) { println("An empty map!") }
+    
     val map1 = createSimpleTweetMap()
     // iterating on all with foreach: needs a function that returns Unit and accepts a corresponding tuple from the map (key, value)
     def simpleTweetPrinterFunction(tuple: (Int, String)) : Unit = {
-      println("the key: " + tuple._1 + ", the value : " + tuple._2)
+      println(" the key: " + tuple._1 + ", the value : " + tuple._2)
     }
-    
     map1.foreach(simpleTweetPrinterFunction)
-
-
+    
+    val myMuMap = getMutableMap()
+    println(" - Iterating with an iterator:")
+    val mIter = myMuMap.iterator
+    while (mIter.hasNext) { println(mIter.next) }
+    println(" - Printing elements with foreach:")
+    myMuMap.foreach(kv => println("the key: " + kv._1 + ", the value : " + kv._2) )
   }
 }
