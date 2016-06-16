@@ -34,7 +34,7 @@ object MapCollExamples extends App {
     val map1 = createSimpleTweetMap()
     // iterating on all with foreach: needs a function that returns Unit and accepts a corresponding tuple from the map (key, value)
     def simpleTweetPrinterFunction(tuple: (Int, String)) : Unit = {
-      println(" the key: " + tuple._1 + ", the value : " + tuple._2)
+      println("key: " + tuple._1 + ", value: " + tuple._2)
     }
     map1.foreach(simpleTweetPrinterFunction)
     
@@ -43,6 +43,6 @@ object MapCollExamples extends App {
     val mIter = myMuMap.iterator
     while (mIter.hasNext) { println(mIter.next) }
     println(" - Printing elements with foreach:")
-    myMuMap.foreach(kv => println("the key: " + kv._1 + ", the value : " + kv._2) )
+    myMuMap.foreach(kv => println("key: " + kv._1 + ", value: " + kv._2) )
   }
 }
