@@ -27,7 +27,7 @@ object ListExamples extends App {
   }
   
   def isIdPositive(tw: TweetMsg) : Boolean = {
-    return (tw.id > 0L)
+    tw.id > 0L
   }
   
   def printUserAndMsg(tw: TweetMsg) : Unit = {
