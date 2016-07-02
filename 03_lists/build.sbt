@@ -1,4 +1,4 @@
-name := "02_matcher_app"
+name := "03_lists_app"
 
 version := "0.1"
 

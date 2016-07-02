@@ -1,4 +1,4 @@
-name := "02_matcher_app"
+name := "05_maps_app"
 
 version := "0.1"
 
