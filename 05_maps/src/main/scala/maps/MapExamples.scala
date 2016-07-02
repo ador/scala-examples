@@ -44,5 +44,7 @@ object MapCollExamples extends App {
     while (mIter.hasNext) { println(mIter.next) }
     println(" - Printing elements with foreach:")
     myMuMap.foreach(kv => println("key: " + kv._1 + ", value: " + kv._2) )
+    println(myMuMap.get(2))
+    println(myMuMap.get(5))
   }
 }
