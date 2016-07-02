@@ -15,7 +15,7 @@ object MapCollExamples extends App {
       414 -> "#scaladays are coming to Berlin!",
       435 -> "Scala is the new golden child", 
       506 -> "#scaladays Scaladex: scala package index")
-    return tMap
+    tMap
   }
 
    def getMutableMap(): scala.collection.mutable.Map[Int, String] = {
@@ -23,7 +23,7 @@ object MapCollExamples extends App {
      map += (1 -> "think")
      map += (2 -> "write")
      map += (3 -> "publish")
-     return map 
+     map 
    }
 
   override def main(args: Array[String]): Unit = {
