@@ -15,4 +15,14 @@ class OptionExamplesTest extends FlatSpec {
     assert(name2 == None)
   }
 
+  "it" should "return a default String" in {
+    val name3 = OptionExamples.processOptionResult1(getUserById(101))
+    assert(name3 == "<default name>")
+  }
+
+  "it" should "return a String" in {
+    val name4 = OptionExamples.processOptionResult2(getUserById(101))
+    assert(name4 == "<not found>")
+  }
+
 }
