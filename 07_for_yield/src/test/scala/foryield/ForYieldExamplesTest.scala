@@ -30,4 +30,13 @@ class ForYieldExamplesTest extends FlatSpec {
     assert(allPairs(8)._2 == "playing with scala")
   }
 
+  "it" should "return tweets that have any of the words " in {
+    val inputTweets = ForYieldExamples.createTweetList
+    val words: List[String] = List("playing", "ice")
+    val filteredTweets = ForYieldExamples.filterForManyWords(inputTweets, words)
+    assert(2 == filteredTweets.length)
+    assert(filteredTweets(0).msg == "ice cream")
+    assert(filteredTweets(1).msg == "playing with scala")
+  }
+
 }
