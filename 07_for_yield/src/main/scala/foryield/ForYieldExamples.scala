@@ -19,7 +19,7 @@ object ForYieldExamples extends App {
     val messageList = for (tw <- tweets) yield tw.msg
     messageList
   }
-  
+
   def getMessagesWithScalaOnly(tweets: List[TweetMsg]): List[String] = {
     val filteredMessageList = for {
       tw <- tweets
@@ -34,7 +34,7 @@ object ForYieldExamples extends App {
       user <- tweets.map(_.user)
     } yield (user, tw.msg)
   }
-  
+
   def filterForManyWords(tweets: List[TweetMsg], words: List[String]): List[TweetMsg] = {
     for {
       tw <- tweets
@@ -42,7 +42,7 @@ object ForYieldExamples extends App {
       if tw.msg.contains(word)
     } yield tw
   }
-  
+
   override def main(args: Array[String]): Unit = {
     println("Hello to for comprehensions in Scala!")
     val tweets = createTweetList
