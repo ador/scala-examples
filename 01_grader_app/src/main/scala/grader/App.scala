@@ -14,6 +14,17 @@ object GraderApp extends App {
 
   def isPassed(d: Grade) = ! (d == E || d == F)
 
+  def getTweetData(id: Long):(String, Int, String) = {
+    if (id == 5) {
+      return ("angie", 30, "Hi, it's my birthday!")
+    }
+    if (id == 7) {
+      return ("tony", 11, "Rainbows! :)")
+    }
+    return ("zoe", 13, "More rainbows! :)")
+  }
+
+  
   def grade(score: Int):Grade = score match {
       case a if (a < 40) => F
       case a if (40 <= a && a < 50) => E

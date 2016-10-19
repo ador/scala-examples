@@ -54,10 +54,10 @@ object ListExamples extends App {
     println("Filtered list is: " + filteredList)  
 
     // forall
-    val trueOfFalse1 = tweetList1.forall(isIdPositive)
-    println("All id numbers positive? " +  trueOfFalse1)
-    val trueOfFalse2 = List(t1,t2).forall(isIdPositive)
-    println("All id numbers positive? " +  trueOfFalse2)
+    val trueOrFalse1 = tweetList1.forall(isIdPositive)
+    println("All id numbers positive? " +  trueOrFalse1)
+    val trueOrFalse2 = List(t1,t2).forall(isIdPositive)
+    println("All id numbers positive? " +  trueOrFalse2)
     
     // foreach
     tweetList1.foreach(printUserAndMsg)

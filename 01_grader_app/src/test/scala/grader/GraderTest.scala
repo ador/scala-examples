@@ -57,4 +57,13 @@ class GraderTest extends FlatSpec {
   "Grader" should "reject as not passed with F" in {
     assert(!GraderApp.isPassed(F))
   }
+  
+  "Grader" should "reject as not passed with F22" in {
+    assert(GraderApp.getTweetData(5)._1 == "angie")
+    assert(GraderApp.getTweetData(10)._1 == "zoe")
+    val(name, age, _) = GraderApp.getTweetData(8L)
+    assert(name == "zoe")
+    assert(age == 13)
+  }
+
 }
