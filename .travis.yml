@@ -3,4 +3,4 @@ jdk: oraclejdk8
 sudo: false
 before_install: umask 0022
 script:
-  - scripts/validator.sh
+  - scripts/test_all.sh
