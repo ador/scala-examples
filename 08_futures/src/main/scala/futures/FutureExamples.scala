@@ -32,12 +32,12 @@ object FutureExamples extends App {
     }
     println("Hi, waiting here a bit so that the app does not exit before we receive the tweets")
     Thread.sleep(2000)
-    
+
     println("Another approach: waiting until it happens. Asking for tweets again... ")
     lazy val tweets = fetchTweetList
-    
+
     Await.result(tweets, 2 second)
-    
+
     // println(tweets.toString)
     // the first '<-' in the for comp. gets the List of tweets from the "Promise" object
     for (tweetList <- tweets; tw <- tweetList) {
