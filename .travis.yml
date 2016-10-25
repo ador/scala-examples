@@ -4,3 +4,7 @@ sudo: false
 before_install: umask 0022
 script:
   - scripts/test_all.sh
+notifications:
+  email:
+    - ador@protonmail.com
+
