@@ -17,7 +17,7 @@ class ListExamplesTest extends FlatSpec {
     val list1: List[Int] = List(1,2,3)
     val list2 = ListExamples.addToBothEndsTwice(list1, 5)
     assert(list2.length == list1.length + 4)
-    assert(List(5,5,1,2,3,5,5).equals(list2))
+    assert(List(5,5,1,2,3,5,5,2).equals(list2))
   }
 
   "it" should "return (9,8,7, 1,2,3, 9,8,7)" in {
